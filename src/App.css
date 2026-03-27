@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+:root {
+  --main-color: rgb(31 41 55);
+  --secandary-color: rgb(37 99 235);
+}
+.container {
+  /* padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto; */
+  width: 75%;
+}
+.box {
+  display: flex;
+  justify-content: center;
+}
+body {
+  /* background-color: var(--main-color); */
+  /* color: rgb(37 99 235); */
+  /* overflow: hidden; */
+  background-color: rgb(17 24 39);
+  height: 100vh;
+}
+html {
+  scroll-behavior: smooth;
+}

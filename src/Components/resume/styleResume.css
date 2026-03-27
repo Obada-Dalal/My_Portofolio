@@ -1,0 +1,222 @@
+.resume {
+  padding-bottom: 50px;
+}
+/***** Start Style Edeucation  *****/
+.icon-info {
+  margin-bottom: 20px;
+  /* overflow: hidden; */
+}
+.icon-info i {
+  font-size: 30px;
+  color: var(--secandary-color);
+}
+.icon-info span {
+  font-size: 25px;
+  margin-left: 10px;
+}
+.resume h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+.main-resume {
+  color: white;
+}
+
+.des {
+  background-color: rgb(31 41 55);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 40px;
+  margin-bottom: 50px;
+  line-height: 1.6;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.des::before,
+.workex-des::before,
+.main-resume-skills::before {
+  content: "";
+  position: absolute;
+  width: 1.5px;
+  height: 120%;
+  left: -29px;
+  top: 12px;
+  background-color: rgb(31 41 55);
+}
+.des::after,
+.workex-des::after,
+.main-resume-skills::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: -33px;
+  top: 1px;
+  background-color: var(--secandary-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.des p {
+  width: 70%;
+  line-height: 1.6;
+  letter-spacing: 0.8px;
+}
+.des .date i {
+  color: var(--secandary-color);
+}
+.des .date span {
+  margin-left: 10px;
+  color: var(--secandary-color);
+}
+.date {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+/* End Style Edeucation  */
+/***** Start Style Work Experience  *****/
+.workex-des {
+  -webkit-border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  /* width: 90%; */
+  margin-left: 40px;
+  line-height: 1.6;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(31 41 55);
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.workex-des p {
+  line-height: 1.6;
+  letter-spacing: 0.8px;
+}
+/* End Style Work Experience  */
+/***** Start Skiles  *****/
+.main-resume-skills {
+  padding-top: 50px;
+  color: white;
+}
+.main-resume-skills .box-icons {
+  background-color: rgb(31 41 55);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 90%; */
+  margin-left: 40px;
+  margin-bottom: 50px;
+  line-height: 1.6;
+  padding: 10px;
+  border-radius: 5px;
+  /* overflow: hidden; */
+}
+.main-resume-skills .box-icons div {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(17 24 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-resume-skills .box-icons div i {
+  font-size: 50px;
+}
+.icon-tailwind {
+  color: white; /* اللون */
+  width: 50px;
+  height: 50px;
+}
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.icon-wrapper i,
+.icon-wrapper svg {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* النص المخفي */
+.icon-wrapper::before {
+  content: attr(data-title); /* يأخذ النص من data-title */
+  position: absolute;
+  bottom: 96%; /* يظهر فوق الأيقونة */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* عند hover يظهر */
+.icon-wrapper:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+.main-resume-skills .box-icons div i:hover,
+.icon-tailwind:hover {
+  color: var(--secandary-color);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+/* ميديا الموبايل */
+@media (max-width: 768px) {
+  .main-resume-skills .box-icons {
+    flex-wrap: wrap;
+  }
+  .main-resume-skills .box-icons div {
+    width: 60px;
+    height: 60px;
+  }
+  .des p,
+  .workex-des p,
+  .main-resume-skills p {
+    font-size: 14px;
+  }
+  .des .date span {
+    font-size: 13px;
+  }
+  .date {
+    justify-content: end;
+  }
+  .des {
+    display: block;
+  }
+  .des p {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .main-resume-skills .box-icons {
+    justify-content: space-evenly;
+  }
+  .icon-wrapper::before {
+    bottom: 96%;
+    padding: 2px 10px;
+    font-size: 10px;
+  }
+}
+/* End Skiles  */
